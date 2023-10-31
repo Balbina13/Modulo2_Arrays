@@ -108,15 +108,22 @@
 
 // const tragamonedas = ["sol","sol","sol","sol", "sol"]
 
-// let sol = 0;
+// const palabra = "sol"
+// //const palabra = "estrella"
 
-// tragamonedas.forEach(function(symbol) {
-//   if (symbol == "sol") {
-//     sol++;
-//   }
-// });
+// const gano =(palabra, tragamonedas) =>  {
+//     let count = 0
+//     for (let i = 0; i < tragamonedas.length; i++)   {
+//         if (tragamonedas[i].includes(palabra))  {
+//             count++ 
+//         }
+// }  
+// return count 
+// }
 
-// console.log(sol);
+// console.log(gano(palabra, tragamonedas))
+
+
 
 
 //6-
@@ -150,23 +157,93 @@
 
 // separar("perro", "gato", "perro", "gato", "gato", "perro", "perro")
 
-const perrosYGatos = ["perro", "gato", "perro", "gato", "gato", "perro", "perro"]
-
-//const a = "gato"
-
-//const b = "perro"
-
-console.log(perrosYGatos.sort())
-
-
-//console.log(ordenar(perrosYGatos))
-
+// const perrosYGatos = ["perro", "gato", "perro", "gato", "gato", "perro", "perro"]
 
 // const separar = (perrosYGatos) =>   {
-//     console.log(perrosYGatos.sort())
-//  }
+//     return perrosYGatos.sort().reverse()
+// }
 
-//console.log(separar())
+// console.log(separar(perrosYGatos))
+
+//8-
+//obtenerChatStatus(usuarias)
+// Crear una función obtenerChatStatus que tome como argumento un array de strings usuarias y devuelva un string con el status del chat. Las reglas son:
+
+// Para una usuaria, debe mostrar: NOMBRE_USUARIA_1 está conectada
+// Para dos usuarias, debe mostrar: NOMBRE_USUARIA_1 y NOMBRE_USUARIA_2 + están conectadas
+// Para más de dos usuarias, debe mostrar: NOMBRE_USUARIA_1, NOMBRE_USUARIA_2 y X persona(s) más están conectadas
+// Ejemplo:
+
+// obtenerChatStatus(['Ada']) // 'Ada está conectada'
+// obtenerChatStatus(['Ada', 'Grace']) // 'Ada y Grace están conectadas'
+// obtenerChatStatus(['Ada', 'Grace', 'Marie']) // 'Ada, Grace y 1 persona(s) más están conectadas'
+
+//const usuaria = ["Ada"]
+
+//const usuarias = ['Ada', 'Grace']
+
+//const usuarias = ['Ada', 'Grace', 'Marie']
+
+//funciona para 1 user
+// for (const user of usuarias) {
+//         console.log(`${user} está conectada`)
+// }
+
+//funciona para 2 users
+
+// for (let i = 0; i < usuarias.length; i++) {
+//     let nombre = " "
+//     const user = usuarias[i];
+//     for (const user of usuarias) {
+//         nombre ++
+//         console.log(`${usuarias.join(" y ")} están conectadas`)
+//     }
+    
+// }
+
+//funciona para 3 users :)
+
+// for (let i = 0; i < usuarias.length; i++) {
+//     let nombre = " "
+//     const user = usuarias[i];
+//     for (const user of usuarias) {
+//         nombre ++
+//         let onlyTwoUsers = usuarias.slice(0,2)
+//         console.log(`${onlyTwoUsers.join(", ")} y 1 persona(s) más están conectadas`)
+//     }
+// }
+
+//9-
+
+// germinar(plantines)
+// Crear una función germinar que tome como argumento un string de plantines con flores y plantines (🌱). El array debe comenzar con una flor. La función debe devolver un string con los plantines convertidos en flores. El plantín se debe convertir en la primera flor que encuentre a su izquierda. Ejemplo:
+
+// germinar('🌷🌱🌻🌱🌸🌱🌷🌱🌻🌱🌸🌱') // '🌷🌷🌻🌻🌸🌸🌷🌷🌻🌻🌸🌸'
+// germinar('🌷🌱🌱🌱🌻🌱🌱🌸🌱🌱🌱🌱') // '🌷🌷🌷🌷🌻🌻🌻🌸🌸🌸🌸🌸'
+// germinar('🌻🌸🌱🌷🌻🌱🌱🌷🌷🌱🌱🌱') // '🌻🌸🌸🌷🌻🌻🌻🌷🌷🌷🌷🌷'
+
+const plantines = ["tulipan", "plantín", "girasol", "plantín", "sakura", "plantín", "tulipan", "plantín", "girasol", "plantín", "sakura", "plantín"]
+//const plantines = ["tulipan", "plantín", "plantín", "plantín", "girasol", "plantín","plantín", "sakura", "plantín","plantín","plantín","plantín",]
+//const plantines = ["girasol", "sakura", "plantín", "tulipan", "girasol", "plantín","plantín", "tulipan", "tulipan", "plantín","plantín","plantín",]
+
+for (planta of plantines)   {
+    if (planta.indexOf("tulipan") < planta.indexOf("plantín")){    
+        console.log(planta.replace("plantín", "tulipan"))
+    } else if (planta.indexOf("girasol") < planta.indexOf("plantín"))  {
+        console.log(planta.replace("plantín", "girasol"))
+    } else if (planta.indexOf("sakura") < planta.indexOf("plantín"))   {
+        console.log(planta.replace("plantín", "sakura"))
+    }
+}
+
+
+
+
+
+
+
+
+
 
 // const simbolo1 = "sol"
 
