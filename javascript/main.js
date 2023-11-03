@@ -1,3 +1,24 @@
+//EJERCICIOS ARRAYS:
+//1- SI
+//2- SI
+//3- SI
+//4- SI
+//5- SI
+//6- SI
+//7- SI
+//8- SI
+//9- NO RESUELTO. CONSIGO QUE LA PALABRA PLANTIN SE CAMBIE A UN MISMO VALOR, PERO NO QUE ADOPTE LOS VALORES DE LA FLOR PRÓXIMA. AUN VIENDO SI DEBO REFORMULAR. QUIERO VER SI BUSCANDO MAS INFO LO LOGRO. 
+//10- NO RESUELTO. CONSIGO QUE PARTE DE LOS ELEMENTOS QUE SE DEBEN ELIMINAR NO FIGUREN, PERO QUEDA COLGADO UN CONEJO EN UNA DE LAS OPCIONES. AUN VIENDO QUÉ DEBO CAMBIAR EN EL CODIGO. O REFORMULARLO
+//11- SI
+//12- NO RESUELTO. NO CONSIGO QUE LOS RESULTADOS PUSHEEN EN UN NUEVO ARRAY
+//13- SI
+//14- SI
+//15- AUN RESOLVIENDO
+//16- PENDIENTE
+//17- PENDIENTE
+//18- PENDIENTE
+// ARRAY + DOM: TODO PENDIENTE
+
 
 //1-
 //obtenerMenor(numeros)
@@ -214,6 +235,8 @@
 //     }
 // }
 
+/////////////////////////////////////////////////////AUN NO SALE EL 9//////////////////////////////////////////////////////////
+
 //9-
 
 // germinar(plantines)
@@ -247,7 +270,7 @@
 
 // const germinar = (plantass) =>   {
 //     if (plantass.indexOf("plantín") === 1 && plantass.indexOf("tulipan") === 0 && plantass.indexOf("plantín") === 7 && plantass.indexOf("tulipan") === 6){    
-//                 let borron = plantass.replace("plantín","puton")
+//                 let borron = plantass.replace("plantín","alienigena")
 
 //                 return borron
 // }
@@ -277,6 +300,8 @@
 
 // }
 //console.log(germinar(plantines))
+
+////////////////////////////////////////////////////////////////////////AUN NO SALE EL 10//////////////////////////////////////////////////////////////
 
 //10-
 
@@ -347,8 +372,10 @@
    
 // }
 
+///////////////////////////////////////////////////////////////AUN NO SALE EL 12//////////////////////////////////////////////////////////////////////
 
 //12-
+
 //filtrarPorLongitudMayorA(longitud, palabras)
 //Crear una función filtrarPorLongitud que tome como argumentos un número longitud y un array de strings palabras y que devuelva un array con las palabras que tengan una cantidad de letras mayor a longitud. Ejemplo:
 
@@ -391,6 +418,7 @@
 
 
 //13-
+
 //recortar(cantidadLetras, palabras)
 
 //const palabras = ["elefante", "dinosaurio", "chocolate", "avion", "america"]
@@ -442,6 +470,8 @@
 
 //console.log(sonIguales(a,b))
 
+//////////////////////////////////////////////AUN RESOLVIENDO EL 15////////////////////////////////////////////////////////////////////////////////////
+
 //15-
 
 //obtenerResultado(jugadoraA, jugadoraB, puntajesA, puntajesB)
@@ -489,7 +519,7 @@ const obtenerPuntajeGanador = (jugadoraA, jugadoraB, puntajesA, puntajesB) => {
 
 
 
-
+//////////////////////////////////////////////////////////////ejercicio reservado para examinar luego////////////////////////////////////////////////
 
 //console.log(sonIguales(a,b))
 
