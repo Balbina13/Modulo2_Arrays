@@ -130,24 +130,25 @@
 // estanJuntos(personajes)
 // Crear una función estanJuntos que tome como argumento un array de strings personajes, y devuelva true si Sam se encuentra al lado de Frodo, ya sea antes o después, o false sino. Ejemplo:
 
-// estanJuntos(['Sam', 'Frodo', 'Legolas']) //true
+//estanJuntos(['Sam', 'Frodo', 'Legolas']) //true
 // estanJuntos(['Aragorn', 'Frodo', 'Frodo']) //true
 // estanJuntos(['Sam', 'Orco', 'Frodo']) //true
 
-//const personajes = ['Sam', 'Frodo', 'Legolas']
+//const personajes = ["Sam", "Frodo", "Legolas"]
+//const personajes = ["Aragorn", "Sam", "Frodo"]
 //const personajes = ['Aragorn', 'Frodo', 'Frodo']
 //const personajes = ["Sam", "Orco", "Frodo"]
-//console.log(personajes.indexOf("Sam"))
+//console.log(personajes.indexOf("Frodo"))
 
-//  const estanJuntos = (personajes) => {
-//       if (personajes.indexOf("Sam") < personajes.indexOf("Frodo") || personajes.indexOf("Sam") > personajes.indexOf("Frodo") && personajes.indexOf("Frodo") === 2){    
-//          return true
-//      } else if (personajes.indexOf("Sam") === -1){
-//          return false
+// const estanJuntos = (personajes) => {
+//       if (personajes.indexOf("Sam") === 0 && personajes.indexOf("Frodo") === 1 || personajes.indexOf("Sam") === 1 && personajes.indexOf("Frodo") === 2 || personajes.indexOf("Sam") === 2 && personajes.indexOf("Frodo") === 2) {    
+//        return "están juntos"
+//      }  else (personajes.indexOf("Sam") === -1); {
+//          return "no están juntos"
 //      }
 //  }
 
-// console.log(estanJuntos(personajes))
+//  console.log(estanJuntos(personajes))
 
 //7-
 // separar(perrosYGatos)
@@ -222,19 +223,267 @@
 // germinar('🌷🌱🌱🌱🌻🌱🌱🌸🌱🌱🌱🌱') // '🌷🌷🌷🌷🌻🌻🌻🌸🌸🌸🌸🌸'
 // germinar('🌻🌸🌱🌷🌻🌱🌱🌷🌷🌱🌱🌱') // '🌻🌸🌸🌷🌻🌻🌻🌷🌷🌷🌷🌷'
 
-const plantines = ["tulipan", "plantín", "girasol", "plantín", "sakura", "plantín", "tulipan", "plantín", "girasol", "plantín", "sakura", "plantín"]
+//const plantas = ["tulipan", "plantín", "girasol", "plantín", "sakura", "plantín", "tulipan", "plantín", "girasol", "plantín", "sakura", "plantín"]
 //const plantines = ["tulipan", "plantín", "plantín", "plantín", "girasol", "plantín","plantín", "sakura", "plantín","plantín","plantín","plantín",]
 //const plantines = ["girasol", "sakura", "plantín", "tulipan", "girasol", "plantín","plantín", "tulipan", "tulipan", "plantín","plantín","plantín",]
 
-for (planta of plantines)   {
-    if (planta.indexOf("tulipan") < planta.indexOf("plantín")){    
-        console.log(planta.replace("plantín", "tulipan"))
-    } else if (planta.indexOf("girasol") < planta.indexOf("plantín"))  {
-        console.log(planta.replace("plantín", "girasol"))
-    } else if (planta.indexOf("sakura") < planta.indexOf("plantín"))   {
-        console.log(planta.replace("plantín", "sakura"))
-    }
-}
+//const plantass = plantas.join(", ").toString()
+
+// const germinar = (plantas) =>   {
+//     const tulipan = plantas.indexOf("tulipan")
+//     const plantin = plantas.indexOf("plantín")
+//     for (let planta of plantas){    
+        
+//     }
+// }
+
+// for (let planta of plantas) {
+//     if (plantas.indexOf("plantín") === 1 && plantas.indexOf("tulipan") === 0)   {
+//     console.log(planta.replace("plantín", "pito"))
+// }
+// }
+
+//console.log(plantas)
+
+// const germinar = (plantass) =>   {
+//     if (plantass.indexOf("plantín") === 1 && plantass.indexOf("tulipan") === 0 && plantass.indexOf("plantín") === 7 && plantass.indexOf("tulipan") === 6){    
+//                 let borron = plantass.replace("plantín","puton")
+
+//                 return borron
+// }
+// }
+
+//console.log(germinar(plantass))
+
+
+// const germinar = (plantas) =>  {
+//
+//     if (plantines.indexOf("plantín") === 1 && plantines.indexOf("tulipan") === 0){    
+//        let borron = plantines.replace(1, 2,"puton")
+//        return borron
+//     }
+    
+// }
+
+// console.log(germinar(plantines))
+
+// const germinar = planta.replace("plantín", "tulipan")
+// const germinar = (plantines) => {
+    
+// for (let i = 0; i < plantines.length; i++) {
+//     const planta = plantines[i];
+    
+// }
+
+// }
+//console.log(germinar(plantines))
+
+//10-
+
+// comer(plantas)
+// Crear una función comer que tome por parámetro un string plantas que consista en plantas, un conejo y una señal de prohibido. El conejo se come todas las plantas que hay a su derecha, hasta que se encuentra con la señal de prohibido. El programa debe mostrar las plantas sobrevivientes, que son todas las que están a la izquierda del conejo (si hay) y a la derecha de la señal (si hay). Ejemplo:
+
+// comer('🐰🥕🥬🥕🚫') // ''
+// comer('🥕🥬🐰🥕🥕🥕🚫') // '🥕🥬'
+// comer('🐰🥕🥬🥕🚫🥕') // '🥕'
+// comer('🌱🥕🌱🐰🌱🥬🌱🌱🚫🌷') // '🌱🥕🌱🌷'
+
+//const plantas = ["conejo","zanahoria","puerro", "zanahoria", "cartel"]
+//const plantas = ["zanahoria", "puerro", "conejo", "zanahoria", "zanahoria", "zanahoria", "cartel"]
+//const plantas = ["rabanito", "zanahoria", "rabanito", "conejo", "rabanito", "puerro", "rabanito", "rabanito", "cartel", "tulipan"]
+
+//array 1
+// const comer = (plantas) =>  {
+//     plantas.join(" ")
+//     for (conejo of plantas) {
+//        const p = plantas.splice(0,2)
+//     }
+//     return plantas
+// }
+
+// console.log(comer(plantas))
+
+//array 2
+// const comer = (plantas) =>  {
+//     plantas.join(" ")
+//     for (conejo of plantas) {
+//        const p = plantas.splice(2,6)
+//     }
+//     return plantas
+// }
+
+// console.log(comer(plantas))
+
+//array 3 (queda el conejo, no salio)
+// const comer = (plantas) =>  {
+//     plantas.join(" ")
+//     for (conejo of plantas) {
+        
+//        plantas.splice(-2,1)
+       
+//     }
+//     return plantas
+// }
+
+// console.log(comer(plantas))
+
+//11-
+//multiplicar(multiplicador, numeros)
+//Crear una función multiplicar que tome como argumentos un número multiplicador y un array de números numeros, y que devuelva un array donde cada elemento es el resultado del elemento del primer array (en la misma posición) multiplicado por el número ingresado. Ejemplo:
+
+//multiplicar(2, [5, 7, 15, 22, 40]) // [10, 14, 30, 44, 80]
+//multiplicar(10, [2, 5, 77]) // [20, 50, 770]
+
+//const numerillos = [5, 7, 15, 22, 40]
+
+// const numerillos = [2, 5, 77]
+
+// //const multiplicador = 2
+// const multiplicador = 10
+    
+    
+// for (let numero of numerillos)  {
+//     console.log(numero*multiplicador)
+   
+// }
+
+
+//12-
+//filtrarPorLongitudMayorA(longitud, palabras)
+//Crear una función filtrarPorLongitud que tome como argumentos un número longitud y un array de strings palabras y que devuelva un array con las palabras que tengan una cantidad de letras mayor a longitud. Ejemplo:
+
+//filtrarPorLongitudMayorA(4, [
+//  'dia',
+//  'remolacha',
+//  'azul',
+//  'sorpresa',
+//  'te',
+//  'verde',
+//]) // ['remolacha', 'sorpresa', 'verde']
+
+//  const longitud = [4]
+//  const palabras = ["dia", "azul", "remolacha", "sorpresa", "te", "verde"]
+
+//  const filtrarPorLongitudMayorA = (longitud, palabras) =>    {
+//      const newWords = []
+//      for (let palabra of palabras)  {
+//          if(palabra.length > longitud ) 
+                 
+//             console.log(palabra)
+//              console.log(newWords.push(palabra))
+         
+         
+//     }
+//   }
+
+//console.log(filtrarPorLongitudMayorA(longitud, palabras)) 
+
+// for (let i = 0; i < palabras.length; i++) {
+//    //const newWords = []
+//    const palabra = palabras[i];
+//    if (palabra.length > longitud)   {
+//       //console.log(newWords.push(palabra))
+//       console.log(palabra)
+//    }
+  
+// }
+
+
+
+//13-
+//recortar(cantidadLetras, palabras)
+
+//const palabras = ["elefante", "dinosaurio", "chocolate", "avion", "america"]
+
+//const palabras = ["algoritmo", "bug", "compilador"] 
+
+//const cantidadLetras = [4]
+
+//const cantidadLetras = (palabra) => palabra.slice(0,4)
+
+//const cantidadLetras = (palabra) => palabra.slice(0,1)
+
+//  const recortar = (palabras, callback) =>   {
+//    const newArr = []
+//    for (const palabra of palabras){ 
+//       const modWord = callback(palabra)
+//       newArr.push(modWord)
+//    }
+//    return newArr
+//  }
+
+//  console.log(recortar(palabras, cantidadLetras))
+
+//  const recortar = (palabras, cantidadLetras) =>{   
+//     const newArr = []
+//     for (const palabra of palabras){   
+//       const modWord = cantidadLetras(palabra)
+//       newArr.push(modWord)
+//     }
+//    return newArr
+//    }
+
+//    console.log(recortar(palabras, cantidadLetras))
+
+//14-
+
+//sonIguales(a,b)
+
+//const a = [10, 25, 6, 33, 48, 105]
+//const b = [10, 25, 6, 33, 48, 105]
+
+//const a = [10, 25, 6, 33, 48, 105]
+//const b = [11, 25, 6, 33, 48, 105]
+
+//const a = [10, 25, 33, 48, 105]
+//const b = [25, 10, 6, 33, 48, 105]
+
+//const sonIguales = (a,b) => a.toString()=== b.toString()
+
+//console.log(sonIguales(a,b))
+
+//15-
+
+//obtenerResultado(jugadoraA, jugadoraB, puntajesA, puntajesB)
+
+const jugadoraA = "Ada"
+const jugadoraB = "Grace"
+
+const puntajesA = [3, 5, 2]
+const puntajesB = [4, 6, 2]
+
+//puntajesA[0] vs. puntajesB[0] -> Gana B
+//puntajesA[1] vs. puntajesB[1] -> Gana B
+//puntajesA[2] vs. puntajesB[2] -> Empate
+
+const resultadoEmpate = (puntajesA, puntajesB) => puntajesA[0] === puntajesB[0] || puntajesA[1] === puntajesB[1] || puntajesA[2] === puntajesB[2]
+const resultadoGanaA = (puntajesA, puntajesB) => puntajesA[0] > puntajesB[0] || puntajesA[1] > puntajesB[1] || puntajesA[2] > puntajesB[2]
+const resultadoGanaB = (puntajesA, puntajesB) => puntajesA[0] < puntajesB[0] || puntajesA[1] < puntajesB[1] || puntajesA[2] < puntajesB[2]
+
+
+const obtenerPuntajeGanador = (jugadoraA, jugadoraB, puntajesA, puntajesB) => {   
+
+    if(resultadoEmpate(puntajesA, puntajesB)){
+      return "Empate"   
+
+      }else if  (resultadoGanaA(puntajesA, puntajesB)){
+           return jugadoraA
+      } else if (resultadoGanaB(puntajesA, puntajesB)){
+        return jugadoraB
+     }
+        
+
+  }
+
+  console.log(obtenerPuntajeGanador(jugadoraA, jugadoraB, puntajesA, puntajesB))
+// }
+
+// console.log(puntajesA[i])
+
+// const obtenerResultado = (jugadoraA, jugadoraB, puntajesA, puntajesB) =>{  
+//      if (puntajesA.charAt(0)===puntajesB.charAt(0))
+//      return "empate"
+// }
 
 
 
@@ -242,8 +491,7 @@ for (planta of plantines)   {
 
 
 
-
-
+//console.log(sonIguales(a,b))
 
 // const simbolo1 = "sol"
 
