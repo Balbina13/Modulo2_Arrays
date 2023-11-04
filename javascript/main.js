@@ -16,7 +16,6 @@
 //15- AUN RESOLVIENDO
 //16- PENDIENTE
 //17- PENDIENTE
-//18- PENDIENTE
 // ARRAY + DOM: TODO PENDIENTE
 
 
@@ -395,12 +394,10 @@
 //      const newWords = []
 //      for (let palabra of palabras)  {
 //          if(palabra.length > longitud ) 
-                 
-//             console.log(palabra)
-//              console.log(newWords.push(palabra))
-         
-         
+//             newWords.push(palabra)
+//        }
 //     }
+//       return newWords
 //   }
 
 //console.log(filtrarPorLongitudMayorA(longitud, palabras)) 
@@ -409,10 +406,9 @@
 //    //const newWords = []
 //    const palabra = palabras[i];
 //    if (palabra.length > longitud)   {
-//       //console.log(newWords.push(palabra))
-//       console.log(palabra)
+//       newWords.push(palabra)
 //    }
-  
+//     return newWords
 // }
 
 
@@ -476,36 +472,36 @@
 
 //obtenerResultado(jugadoraA, jugadoraB, puntajesA, puntajesB)
 
-const jugadoraA = "Ada"
-const jugadoraB = "Grace"
+// const jugadoraA = "Ada"
+// const jugadoraB = "Grace"
 
-const puntajesA = [3, 5, 2]
-const puntajesB = [4, 6, 2]
+// const puntajesA = [3, 5, 2]
+// const puntajesB = [4, 6, 2]
 
-//puntajesA[0] vs. puntajesB[0] -> Gana B
-//puntajesA[1] vs. puntajesB[1] -> Gana B
-//puntajesA[2] vs. puntajesB[2] -> Empate
+// //puntajesA[0] vs. puntajesB[0] -> Gana B
+// //puntajesA[1] vs. puntajesB[1] -> Gana B
+// //puntajesA[2] vs. puntajesB[2] -> Empate
 
-const resultadoEmpate = (puntajesA, puntajesB) => puntajesA[0] === puntajesB[0] || puntajesA[1] === puntajesB[1] || puntajesA[2] === puntajesB[2]
-const resultadoGanaA = (puntajesA, puntajesB) => puntajesA[0] > puntajesB[0] || puntajesA[1] > puntajesB[1] || puntajesA[2] > puntajesB[2]
-const resultadoGanaB = (puntajesA, puntajesB) => puntajesA[0] < puntajesB[0] || puntajesA[1] < puntajesB[1] || puntajesA[2] < puntajesB[2]
+// const resultadoEmpate = (puntajesA, puntajesB) => puntajesA[0] === puntajesB[0] || puntajesA[1] === puntajesB[1] || puntajesA[2] === puntajesB[2]
+// const resultadoGanaA = (puntajesA, puntajesB) => puntajesA[0] > puntajesB[0] || puntajesA[1] > puntajesB[1] || puntajesA[2] > puntajesB[2]
+// const resultadoGanaB = (puntajesA, puntajesB) => puntajesA[0] < puntajesB[0] || puntajesA[1] < puntajesB[1] || puntajesA[2] < puntajesB[2]
 
 
-const obtenerPuntajeGanador = (jugadoraA, jugadoraB, puntajesA, puntajesB) => {   
+// const obtenerPuntajeGanador = (jugadoraA, jugadoraB, puntajesA, puntajesB) => {   
 
-    if(resultadoEmpate(puntajesA, puntajesB)){
-      return "Empate"   
+//     if(resultadoEmpate(puntajesA, puntajesB)){
+//       return "Empate"   
 
-      }else if  (resultadoGanaA(puntajesA, puntajesB)){
-           return jugadoraA
-      } else if (resultadoGanaB(puntajesA, puntajesB)){
-        return jugadoraB
-     }
+//       }else if  (resultadoGanaA(puntajesA, puntajesB)){
+//            return jugadoraA
+//       } else if (resultadoGanaB(puntajesA, puntajesB)){
+//         return jugadoraB
+//      }
         
 
-  }
+//   }
 
-  console.log(obtenerPuntajeGanador(jugadoraA, jugadoraB, puntajesA, puntajesB))
+//   console.log(obtenerPuntajeGanador(jugadoraA, jugadoraB, puntajesA, puntajesB))
 // }
 
 // console.log(puntajesA[i])
@@ -514,6 +510,81 @@ const obtenerPuntajeGanador = (jugadoraA, jugadoraB, puntajesA, puntajesB) => {
 //      if (puntajesA.charAt(0)===puntajesB.charAt(0))
 //      return "empate"
 // }
+
+///////////////////////////////////////////////////////////////////OPCION 2 DEL EJERCICIO//////////////////////////////////////////////////////////////////////////////////////
+
+// const jugadoraA = "Ada"
+// const jugadoraB = "Grace"
+
+//const puntajesA = [3, 5, 2]
+//const puntajesB = [4, 6, 2]
+
+//const puntajesA = [4, 4, 4]
+//const puntajesB = [1, 2, 3]
+
+// const puntajesA = [3, 5, 5, 7]
+// const puntajesB = [4, 1, 2, 9]
+
+// const A = puntajesA.toString()
+// const B = puntajesB.toString()
+
+//const Empate = (puntajesA, puntajesB) => (puntajesA[i] > puntajesB[i])  === (puntajesA[i] < puntajesB[i])
+
+//console.log(Empate(puntajesA, puntajesB))
+
+// const whoWin = (puntajesA, puntajesB) => { 
+//   // const puntajesA = [3, 5, 2]
+//   // const puntajesB = [4, 6, 2]
+//   if (puntajesA.length != puntajesB.length)
+//       return "False";
+//   else {
+//       for (let i = 0; i < puntajesA.length; i++)
+      
+//           if (puntajesA[i] > puntajesB[i]){  
+//               return "Gano A";
+//   } else if (puntajesA[i] < puntajesB[i])   {
+//     return "Gano B"
+//   } else if (  (puntajesA[i] > puntajesB[i])  === (puntajesA[i] < puntajesB[i] ) ){ 
+    
+//     return "Empate"
+//   }
+// }
+// }
+
+// for (let i = 0; i < puntajesA.length && i < puntajesB.length; i++) {
+  
+// const Empate = (puntajesA, puntajesB) => (puntajesA[i] > puntajesB[i])  === (puntajesA[i] < puntajesB[i])
+// console.log(Empate(puntajesA, puntajesB))
+// }
+
+//const Empate = (puntajesA, puntajesB) => (puntajesA[i] > puntajesB[i])  === (puntajesA[i] < puntajesB[i])
+
+//console.log(Empate())
+
+//let result = whoWin(puntajesA, puntajesB);
+
+//console.log(result)
+
+//16-
+
+
+
+///////////////////////////////////////////////////////////////////////////////EJERCICIOS CON DOM///////////////////////////////////////////////////////////////////////////////
+
+//1-
+
+//CREAR UN PROGRAMA QUE MUESTRE:
+//UN INPUT DE TEXTO
+//UN BOTON PARA AGREGAR TAREA
+//UNA LISTA UL
+//CUANDO SE HAGA CLICK EN EL BOTON, SE DEBE AGREGAR EL VAOR DE INPUT A UN ARRAY Y ACTUALIZAR LA LISTA.
+// const $ = (selector) => document.querySelector(selector)
+
+// const addItem = $("lista_tareas").target.value
+
+// const putText = $("items_lista_tareas").innerText += addItem
+
+// $("boton_agregar").addEventListener("click", putText)
 
 
 
